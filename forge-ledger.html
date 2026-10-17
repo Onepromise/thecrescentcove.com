@@ -275,6 +275,20 @@ footer a:hover { color: var(--gold); }
   .card:hover, .btn:hover { transform: none; }
 }
 
+
+/* ---------- screenshots ---------- */
+.shot-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 30px;
+}
+.shot-grid .shot:first-child { grid-column: 1 / -1; }
+.shot {
+  margin: 0; background: var(--card-bg); border: 1px solid var(--line);
+  border-radius: var(--radius); overflow: hidden;
+}
+.shot img { display: block; width: 100%; height: auto; }
+.shot figcaption { padding: 12px 16px; font-size: 14px; color: var(--muted); }
+.shot figcaption b { color: var(--ink); }
+@media (max-width: 760px) { .shot-grid { grid-template-columns: 1fr; } }
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%230a0f24'/%3E%3Cpath d='M22 6a11 11 0 1 0 4 20A12 12 0 0 1 22 6z' fill='%23f0ead2'/%3E%3C/svg%3E">
 </head>
@@ -290,6 +304,7 @@ footer a:hover { color: var(--gold); }
       <li><a href="index.html#addons">Add-ons</a></li>
       <li><a href="index.html#crew">Crew</a></li>
       <li><a href="index.html#devlog">Devlog</a></li>
+      <li><a href="about.html">About</a></li>
     </ul>
   </div>
 </nav>
@@ -358,6 +373,36 @@ footer a:hover { color: var(--gold); }
     </div>
   </section>
 
+  <!-- ============ SCREENSHOTS ============ -->
+  <section class="section" id="screenshots" aria-labelledby="screenshots-heading">
+    <div class="wrap">
+      <h2 id="screenshots-heading">Screenshots</h2>
+      <p class="desc">The real dashboard, running against a live account. Example data, made-up character names.</p>
+      <div class="shot-grid">
+        <figure class="shot">
+          <img src="https://raw.githubusercontent.com/Onepromise/forges-ledger/main/docs/screenshots/roster.png" alt="Forge's Ledger roster view: character list with levels, item levels, professions, and gold per character" loading="lazy">
+          <figcaption><b>Roster</b> — every character, one view.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="https://raw.githubusercontent.com/Onepromise/forges-ledger/main/docs/screenshots/professions.png" alt="Forge's Ledger professions view: per-character profession skill levels across expansions" loading="lazy">
+          <figcaption><b>Professions</b> — what&apos;s maxed, what&apos;s missing.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="https://raw.githubusercontent.com/Onepromise/forges-ledger/main/docs/screenshots/todo.png" alt="Forge's Ledger tonight plan: auto-checked nightly checklist of priorities" loading="lazy">
+          <figcaption><b>Tonight&apos;s plan</b> — what matters this evening.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="https://raw.githubusercontent.com/Onepromise/forges-ledger/main/docs/screenshots/leveling.png" alt="Forge's Ledger leveling view: progress bars tracking each character toward max level" loading="lazy">
+          <figcaption><b>Leveling</b> — the road to max, visualized.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="https://raw.githubusercontent.com/Onepromise/forges-ledger/main/docs/screenshots/theme-ember.png" alt="Forge's Ledger in the Ember Forge theme: warm orange dashboard styling" loading="lazy">
+          <figcaption><b>Ember Forge theme</b> — make it yours.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ DOWNLOAD ============ -->
   <section class="section alt" id="download" aria-labelledby="download-heading">
     <div class="wrap">
@@ -379,7 +424,7 @@ footer a:hover { color: var(--gold); }
 <footer>
   <div class="wrap">
     <span>&copy; 2026 Crescent Cove</span>
-    <span><a href="index.html">Home</a> &middot; <a href="forge-ledger.html">Forge's Ledger</a></span>
+    <span><a href="index.html">Home</a> &middot; <a href="about.html">About</a> &middot; <a href="forge-ledger.html">Forge's Ledger</a></span>
     <span>Set sail &middot; forge on</span>
   </div>
 </footer>
