@@ -200,7 +200,7 @@ a { color: inherit; }
 .mate p { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
 
 /* ---------- devlog ---------- */
-.devlog-list { margin-top: 30px; display: grid; gap: 14px; }
+.devlog-list { margin-top: 30px; display: grid; gap: 14px; } .devlog-group { margin-top: 30px; } .devlog-group-heading { font-size: 20px; margin: 0 0 4px; } .devlog-group .devlog-list { margin-top: 14px; } .mate .card-link { color: var(--gold); text-decoration: none; font-size: 13px; font-weight: 700; } .mate .card-link:hover { text-decoration: underline; } .mate-links { margin-top: 10px; font-size: 13px; }
 .entry {
   background: var(--card-bg); border: 1px solid var(--line);
   border-radius: var(--radius); padding: 20px 22px;
@@ -382,7 +382,7 @@ footer a:hover { color: var(--gold); }
         <article class="mate">
           <div class="av av-f" aria-hidden="true">F</div>
           <h3>Forge</h3>
-          <p>Founder &middot; code &amp; systems</p>
+          <p>Founder &middot; code &amp; systems</p> <p class="mate-links"><a class="card-link" href="https://wilfredolaboy.com" target="_blank" rel="noopener">Website</a> &middot; <a class="card-link" href="https://github.com/Onepromise" target="_blank" rel="noopener">GitHub</a></p>
         </article>
         <article class="mate">
           <div class="av av-l" aria-hidden="true">L</div>
@@ -412,10 +412,11 @@ footer a:hover { color: var(--gold); }
         <article class="entry">
           <span class="moon-dot" aria-hidden="true"></span>
           <div>
-            <h3><a href="devlog-forge-ledger-v211.html">Devlog: Forge's Ledger 2.11 — Concentration tracking</a></h3>
-            <p>Forge's Ledger 2.11 is live on CurseForge, and the headline is Concentration: every crafting profession's Concentration pool tracked across your whole roster — snapshot on login, projected while you're offline — plus per-character cooldown selection in Customize mode. <a href="devlog-forge-ledger-v211.html">Read the devlog</a></p>
-            <span class="tag">Oct 23, 2026 &middot; Forge's Ledger</span>
+            <h3>The forge is lit</h3>
+            <p>Crescent Cove's Patreon is live. Forge's Ledger — our free WoW addon suite + desktop app — is out on CurseForge and here on the Cove. Patreon is voluntary support for the studio: devlogs, credits, and roadmap votes for patrons, and the work itself stays free for everyone. <a href="https://www.patreon.com/c/TheCrescentCove" rel="noopener">Support us on Patreon</a></p>
+            <span class="tag">Oct 22, 2026 &middot; Launch</span>
           </div>
+        <h3 class="devlog-group-heading">Game devlogs</h3>
         </article>
         <article class="entry">
           <span class="moon-dot" aria-hidden="true"></span>
@@ -428,31 +429,24 @@ footer a:hover { color: var(--gold); }
         <article class="entry">
           <span class="moon-dot" aria-hidden="true"></span>
           <div>
-            <h3>The forge is lit</h3>
-            <p>Crescent Cove's Patreon is live. Forge's Ledger — our free WoW addon suite + desktop app — is out on CurseForge and here on the Cove. Patreon is voluntary support for the studio: devlogs, credits, and roadmap votes for patrons, and the work itself stays free for everyone. <a href="https://www.patreon.com/c/TheCrescentCove" rel="noopener">Support us on Patreon</a></p>
-            <span class="tag">Oct 22, 2026 &middot; Launch</span>
+            <h3><a href="devlog-meadowbound-v015.html">Meadow Bound diaries</a></h3>
+            <p>From 2D to 3D in Unity: the pivot, the plan, and the cozy MMO taking shape one build at a time.</p>
           </div>
         </article>
-        <article class="entry">
+        <h3 class="devlog-group-heading">Addon devlogs</h3>
+         <article class="entry">
           <span class="moon-dot" aria-hidden="true"></span>
           <div>
-            <h3>Building in the open: follow the forge</h3>
-            <p>Build notes, experiments, and honest postmortems from every project — Meadow Bound, Forge's Ledger, and whatever's next.</p>
-            div>
+            <h3><a href="devlog-forge-ledger-v211.html">Devlog: Forge's Ledger 2.11 — Concentration tracking</a></h3>
+            <p>Forge's Ledger 2.11 is live on CurseForge, and the headline is Concentration: every crafting profession's Concentration pool tracked across your whole roster — snapshot on login, projected while you're offline — plus per-character cooldown selection in Customize mode. <a href="devlog-forge-ledger-v211.html">Read the devlog</a></p> <span class="tag">Oct 23, 2026 &middot; Forge's Ledger</span>
+            </div>
         </article>
         <article class="entry">
           <span class="moon-dot" aria-hidden="true"></span>
           <div>
             <h3><a href="devlog-forge-ledger-v211.html">Forge's Ledger devlogs</a></h3>
             <p>From the first build to the CurseForge launch — and every update since.</p>
-            div>
-        </article>
-        <article class="entry">
-          <span class="moon-dot" aria-hidden="true"></span>
-          <div>
-            <h3><a href="devlog-meadowbound-v015.html">Meadow Bound diaries</a></h3>
-            <p>From 2D to 3D in Unity: the pivot, the plan, and the cozy MMO taking shape one build at a time.</p>
-            div>
+            </div>
         </article>
       </div>
       <p class="honest-note">New entries land here as we build. Nothing here ships until it's real.</p>
