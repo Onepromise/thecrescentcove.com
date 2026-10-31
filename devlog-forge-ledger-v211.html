@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Shippori+Mincho:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
    Crescent Cove &mdash; studio site
@@ -307,25 +308,67 @@ footer a:hover { color: var(--gold-soft); }
 .post-body li { margin-bottom: 10px; }
 .post-body h2 { margin: 30px 0 12px; }
 </style>
+<style>
+/* ===== Atlas mockup chrome: header + footer ===== */
+header.site, footer.site{--ivory:#F8F0DD;--gold:#BB7A2A;--gold-soft:#D9A45B;--navy:#0F2167;--navy-deep:#0A173F;--line-on-navy:rgba(248,240,221,.18);font-family:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif}
+header.site .wrap, footer.site .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+header.site{background:var(--navy);color:var(--ivory);position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line-on-navy)}
+header.site .header-in{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:16px;padding-bottom:16px}
+header.site .brand, footer.site .brand{display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--ivory)}
+header.site .brand img.brand-logo, footer.site .brand img.brand-logo{flex:none;display:block;border-radius:10px}
+header.site .brand-name, footer.site .brand-name{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;font-size:1.65rem;font-weight:700;line-height:1;letter-spacing:.01em}
+header.site .brand-sub, footer.site .brand-sub{display:block;font-family:"Manrope",sans-serif;font-size:.62rem;font-weight:800;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-soft);margin-top:4px}
+header.site nav.main{display:flex;align-items:center;gap:6px}
+header.site nav.main a{color:var(--ivory);text-decoration:none;font-weight:600;font-size:.95rem;padding:9px 14px;border-radius:8px}
+header.site nav.main a:hover{background:rgba(248,240,221,.08)}
+header.site nav.main a.active{color:var(--gold-soft);box-shadow:inset 0 -2px 0 var(--gold)}
+header.site nav.main a.nav-cta{border:1.5px solid var(--gold);color:var(--gold-soft);font-weight:800;margin-left:8px}
+header.site nav.main a.nav-cta:hover{background:var(--gold);color:var(--navy-deep)}
+header.site .nav-toggle{display:none;background:none;border:1.5px solid var(--line-on-navy);border-radius:8px;color:var(--ivory);padding:9px 12px;cursor:pointer;font:inherit;font-size:.9rem;font-weight:700}
+footer.site{background:var(--navy-deep);color:var(--ivory)}
+footer.site .footer-in{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;align-items:start;padding-top:56px;padding-bottom:44px}
+footer.site .footer-brand p{color:rgba(248,240,221,.68);font-size:.95rem;margin:14px 0 0;max-width:22rem;line-height:1.6}
+footer.site h4{font-size:.76rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft);margin:6px 0 16px}
+footer.site .footer-links{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+footer.site .footer-links a{color:var(--ivory);text-decoration:none;font-weight:600;font-size:.96rem}
+footer.site .footer-links a:hover{color:var(--gold-soft)}
+footer.site .discord-btn{display:inline-flex;align-items:center;gap:10px;margin-top:4px;background:var(--gold);color:var(--navy-deep);font-weight:800;text-decoration:none;padding:12px 20px;border-radius:10px;font-size:.95rem}
+footer.site .discord-btn:hover{background:var(--gold-soft)}
+footer.site .discord-note{font-size:.85rem;color:rgba(248,240,221,.6);margin-top:12px}
+footer.site .footer-bottom{border-top:1px solid var(--line-on-navy);padding-top:20px;padding-bottom:26px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;font-size:.85rem;color:rgba(248,240,221,.55)}
+@media (max-width:960px){footer.site .footer-in{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){
+  header.site .nav-toggle{display:block}
+  header.site nav.main{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy);flex-direction:column;align-items:stretch;padding:10px 16px 18px;border-bottom:2px solid var(--gold);gap:2px}
+  header.site nav.main.open{display:flex}
+  header.site nav.main a{padding:12px 10px}
+  header.site nav.main a.nav-cta{margin:8px 0 0;text-align:center}
+  header.site{position:relative}
+  footer.site .footer-in{grid-template-columns:1fr;gap:32px}
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<nav class="nav" aria-label="Main navigation">
-  <div class="wrap">
-    <a class="logo" href="index.html"><img class="logo-img" src="assets/crescent-cove-logo.png" alt="Crescent Cove logo" width="36" height="36">CRESCENT COVE</a>
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">☰</button>
-        <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="index.html#games">Games</a></li>
-      <li><a href="index.html#addons">Add-ons</a></li>
-      <li><a href="index.html#crew">Crew</a></li>
-      <li><a href="index.html#devlog">Devlog</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
+<header class="site">
+  <div class="wrap header-in">
+    <a class="brand" href="index.html" aria-label="Crescent Cove — home">
+      <img class="brand-logo" src="assets/crescent-cove-logo.png" alt="" width="40" height="40">
+      <span>
+        <span class="brand-name">Crescent Cove</span>
+        <span class="brand-sub">Indie Game Studio</span>
+      </span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
+    <nav class="main" id="mainNav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="devlog-meadowbound-v070.html" class="active">Devlog</a>
+      <a href="https://www.patreon.com/TheCrescentCove" target="_blank" rel="noopener" class="nav-cta">Patreon</a>
+    </nav>
   </div>
-</nav>
+</header>
 
 <main id="main">
   <!-- ============ DEVLOG POST ============ -->
@@ -357,34 +400,58 @@ footer a:hover { color: var(--gold-soft); }
 
 </main>
 
-<footer>
-  <div class="wrap">
-    <span>&copy; 2026 Crescent Cove</span>
-    <span><a href="index.html">Home</a> &middot; <a href="about.html">About</a> &middot; <a href="forge-ledger.html">Forge's Ledger</a></span>
-    <span>Set sail &middot; forge on</span>
+<footer class="site">
+  <div class="wrap footer-in">
+    <div class="footer-brand">
+      <a class="brand" href="index.html" aria-label="Crescent Cove — home">
+        <img class="brand-logo" src="assets/crescent-cove-logo.png" alt="" width="36" height="36">
+        <span>
+          <span class="brand-name">Crescent Cove</span>
+          <span class="brand-sub">Indie Game Studio</span>
+        </span>
+      </a>
+      <p>A small indie game studio making heartfelt games and handy tools, one moonlit build at a time.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="devlog-meadowbound-v070.html">Devlog</a></li>
+        <li><a href="https://www.patreon.com/TheCrescentCove" target="_blank" rel="noopener">Patreon</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Community</h4>
+      <a class="discord-btn" href="https://discord.gg/GeEUK3FACP" target="_blank" rel="noopener">
+        <svg width="20" height="15" viewBox="0 0 24 18" fill="currentColor" aria-hidden="true"><path d="M20.32 1.9A19.8 19.8 0 0 0 15.37.03a.22.22 0 0 0-.23.13 13.6 13.6 0 0 1-1.87 2.87 15.9 15.9 0 0 0-2.54 0A13.6 13.6 0 0 1 8.86.16.22.22 0 0 0 8.63.03 19.7 19.7 0 0 0 3.68 1.9a.24.24 0 0 0-.11.09C.45 6.67-.27 11.28.1 15.83a.24.24 0 0 0 .09.16 20 20 0 0 0 6.03 3.04.24.24 0 0 0 .25-.1c.46-.63.87-1.3 1.22-2a.24.24 0 0 0-.13-.33 12 12 0 0 1-1.87-.9.24.24 0 0 1-.03-.39c.13-.1.25-.2.37-.29a.24.24 0 0 1 .25-.03c3.93 1.8 8.18 1.8 12.05 0a.24.24 0 0 1 .25.03c.12.1.24.2.37.3a.24.24 0 0 1-.03.38c-.6.35-1.22.64-1.87.9a.24.24 0 0 0-.13.33c.36.7.77 1.37 1.22 2a.24.24 0 0 0 .25.1 20 20 0 0 0 6.03-3.05.24.24 0 0 0 .09-.16c.45-5.22-.64-9.8-3.47-13.77a.2.2 0 0 0-.1-.09ZM8.02 12.33c-1.18 0-2.15-1.08-2.15-2.42s.95-2.42 2.15-2.42 2.17 1.1 2.15 2.42c0 1.34-.95 2.42-2.15 2.42Zm7.96 0c-1.18 0-2.15-1.08-2.15-2.42s.95-2.42 2.15-2.42 2.17 1.1 2.15 2.42c0 1.34-.95 2.42-2.15 2.42Z"/></svg>
+        Join the Discord
+      </a>
+      <p class="discord-note">discord.gg/GeEUK3FACP — say hello, follow the builds, and help test what's next.</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year">2026</span> Crescent Cove. All rights reserved.</span>
+    <span>Set sail · forge on</span>
   </div>
 </footer>
 
 <script>
-/* Mobile nav toggle &mdash; the only JS on this site (no frameworks). */
-(function () {
-  var toggle = document.getElementById('navToggle');
-  var links = document.getElementById('navLinks');
-  if (!toggle || !links) return;
-
-  toggle.addEventListener('click', function () {
-    var open = links.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-
-  links.addEventListener('click', function (e) {
-    if (e.target.tagName === 'A') {
-      links.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-})();
-
+  (function(){
+    var toggle = document.getElementById('navToggle');
+    var nav = document.getElementById('mainNav');
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if (e.target.tagName === 'A' && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  })();
 </script>
 </body>
 </html>
