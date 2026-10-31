@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Devlog: v0.7.0 — Meadow Bound — Crescent Cove</title>
-<meta name="description" content="Meadow Bound v0.7.0 is live on the home server: Act 1 'Stolen in the Night', FF14-style combat, and a login screen that knows where home is. A Crescent Cove devlog.">
+<meta name="description" content="Meadow Bound v0.7.0 is live on the home server: Act 1 'Stolen in the Night', hotbar combat, and a login screen that knows where home is. A Crescent Cove devlog.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Shippori+Mincho:wght@600;700&display=swap" rel="stylesheet">
@@ -336,7 +336,7 @@ footer a:hover { color: var(--gold); }
         <p>v0.7.0 is live on the homelab server — and this one changes what Meadow Bound <em>is</em>. Up to now the meadow was a place: a hamlet, chat, a bag of flowers. As of this morning it&rsquo;s a game with a story and a fight in it.</p>
         <ul>
           <li><strong>Act 1 — &ldquo;Stolen in the Night.&rdquo;</strong> The first story chapter. Bandits came in the night and took two things that matter: your hen — the one you named yourself, back at the start — and the family heirloom hoe. Act 1 is the getting of them back: clues around the hamlet, a lair below the cave, and a Bandit Leader at the end of it who would rather you hadn&rsquo;t come. Finish it, and she follows you home.</li>
-          <li><strong>Combat, FF14-style.</strong> Auto-attack while you think, a hotbar of abilities on a shared 2.5-second rhythm, cast bars that break if you move, mana to mind. Every one of the eight point trees has abilities now, so a Garland build is finally a build and not a promise. The steering direction holds — Stardew Valley &times; WoW &times; FF14 &times; Monster Hunter — only now the FF14 part is real.</li>
+          <li><strong>Combat.</strong> Auto-attack while you think, a hotbar of abilities on a shared 2.5-second rhythm, cast bars that break if you move, mana to mind. Every one of the eight point trees has abilities now, so a Garland build is finally a build and not a promise.</li>
           <li><strong>A proper login.</strong> The login screen has a server dropdown now. Pick <strong>Homelab</strong>, or the handshake sends you away.</li>
         </ul>
         <p>The deploy ran the usual gauntlet — checksum-verified build, a full backup of the v0.6.0 database first, schema migration 8 applied cleanly, and the same accounts and characters waiting on the other side. Keeping score at home: you need the v0.7.0 client for this server; older clients get politely refused by the version handshake. And an honest gap: there&rsquo;s no v0.7.0 Mac client yet — the v0.6.0 Mac build can&rsquo;t join this one. It&rsquo;s on the list, not in the release.</p>
